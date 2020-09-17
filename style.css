@@ -224,3 +224,141 @@ header{
 }
 
 /*Третий блок Team*/
+
+.title_txt {
+    text-align: center;
+}
+
+#team {
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.profile {
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile h3 {
+    padding-top: 1.8vh;
+    font-size: 2.7vh;
+}
+
+.social {
+    padding-top: 1.8vh;
+}
+
+.social img {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.profile p {
+    font-size: 1.7vh;
+}
+
+.second_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.third_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Четвертый блок Service */
+
+#service {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.service_cards {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 35vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bord {
+    width: 110px;
+    height: 110px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bord img {
+    width: 45px;
+    height: 40px;
+}
+
+.card h3 {
+    font-size: 2.5vh;
+    margin-top: 2vh;
+}
+
+/*Пятый блок */
+
+#blog {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    
+    perspective: 1000px;
+}
+
+.btn {
+    width: 200px;
+    height: 55px;
+    background-color: white;
+    border: none;
+    font-size: 1.8vh;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+button {
+    margin-top: 10vh;
+    z-index: 1;
+}
