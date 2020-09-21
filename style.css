@@ -40,7 +40,14 @@ li {
 nav a {
     text-decoration: none;
     color:black;
+    transition: 0.5s;
 }
+
+nav a:hover {
+    text-shadow: 0px 5px 2.5px #999999;
+    font-size: 2.2vh;
+} 
+
 
 .logo {
     width: 55px;
@@ -61,6 +68,13 @@ nav a {
     justify-content: center;
     align-items: center;
     padding-top: 25vh;
+    animation: text_anim 2s 1 ease-in-out;
+}
+
+@keyframes text_anim{
+    0%{transform: translate(-90vw, -10vh);}
+    90%{transform: translate(5vw)}
+    100%{transform: translate(0, 0)}
 }
 
 .main_txt p {
@@ -82,6 +96,14 @@ nav a {
     align-items: center;
     text-decoration: none;
     color: black;
+    transition: 0.3s;
+}
+
+.main_txt a:hover {
+    transform: scale(1.005);
+    background-color: black;
+    color: white;
+    box-shadow: 7px 7px 10px #999999;
 }
 
 header{
@@ -101,18 +123,30 @@ header{
 }
 
 .dot:nth-child(1){
-    opacity: 20%;
+    opacity: 25%;
     margin: 5px 5px 5px 5px;
+    animation: dots 0.5s ease infinite 0.1s alternate;
 }
 
 .dot:nth-child(2){
-    opacity: 30%;
+    opacity: 35%;
     margin: 5px 5px 5px 5px;
+    animation: dots 0.5s ease infinite 0.3s alternate;
 }
 
 .dot:nth-child(3){
-    opacity: 50%;
+    opacity: 55%;
     margin: 5px 5px 5px 5px;
+    animation: dots 0.5s ease-in-out infinite 0.5s alternate;
+}
+
+@keyframes dots{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
 
 /*Второй блок About us*/
@@ -154,6 +188,11 @@ header{
     border-radius: 50%;
     position: absolute;
     left: 50% - 12.5px;
+    transition: .5s;
+}
+
+.circ:hover {
+    transform: scale(1.2);
 }
 
 .num1 {
@@ -243,7 +282,7 @@ header{
 
 .profile {
     width: 70%;
-    height: 50vh;
+    height: 53vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -253,8 +292,13 @@ header{
 .first_card {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    align-self: flex-end;
+    width: 18vw;
+    height: 39vh;
+    padding: 2vw;
+    transition: .5s;
 }
 
 .profile h3 {
@@ -271,8 +315,14 @@ header{
     padding-right: 0.5vw;
 }
 
+.social img:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
 .profile p {
     font-size: 1.7vh;
+    text-align: center;
 }
 
 .second_card {
@@ -281,6 +331,10 @@ header{
     justify-content: space-around;
     align-items: center;
     align-self: flex-start;
+    width: 18vw;
+    height: 39vh;
+    padding: 2vw;
+    transition: .5s;
 }
 
 .third_card {
@@ -288,6 +342,17 @@ header{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-self: flex-end;
+    width: 18vw;
+    height: 39vh;
+    padding: 2vw;
+    transition: .5s;
+}
+
+.first_card:hover, .second_card:hover, .third_card:hover {
+    transform: scale(1.1);
+    border: 2px solid #999999;
+    border-radius: 2vh;
 }
 
 /*Четвертый блок Service */
@@ -323,6 +388,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .bord {
@@ -370,6 +440,10 @@ header{
     z-index: 1;
 }
 
+.btn:active {
+    transform: scale(1.005);
+}
+
 .twits {
     transform-style: preserve-3d;
     position: absolute;
@@ -377,15 +451,25 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 95vh;
     transform: rotateX(45deg);
-    top: 5%;
-    opacity: 0.4;
+    overflow: hidden;
 }
 
+@keyframes twit_anim {
+    from {
+        transform: translateY(80vh);
+    }
+    to {
+        transform: translateY(-95vh);
+    }
+}    
+
 .first, .second, .third, .fourth {
-   padding-top: 10vh; 
+   top: 5%;
+   opacity: 0.4;
+   animation: twit_anim 18s linear infinite normal;
 } 
 
 /* Шестой блок Contact us*/
@@ -402,6 +486,12 @@ header{
 .phone, .pin, .mail {
     text-align: center;
     width: 20vw;
+    transition: 0.3s;
+}
+
+.phone:hover, .pin:hover, .mail:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .contacts {
@@ -427,6 +517,10 @@ header{
     font-size: 1.6vh;
 }
 
+.forma input:focus {
+    transform: scale(1.05);
+}
+
 .area {
     width: 750px;
     height: 200px;
@@ -435,6 +529,10 @@ header{
     margin-top: -1.2vh;
     word-wrap: normal;
     padding: 2vh;
+}
+
+.area:focus {
+    transform: scale(1.05); 
 }
 
 .submit {
@@ -446,6 +544,13 @@ header{
     font-size: 1.8vh;
     font-weight: bolder;
     margin-top: -1.2vh;
+    box-sizing: border-box;
+}
+
+.submit:active {
+    transform: scale(1.005);
+    box-shadow: 7px 7px 10px #999999;
+    border: none;
 }
 
 .copyright {
